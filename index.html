@@ -33,14 +33,26 @@
 
     <div class="container mt-5">
 
-        <div id="welcome">
+        <div id="welcome" class="was-validated">
             <h2>Welcome</h2>
             <p>Welcome to ISTQB Online Test</p>
+            <div class="mb-3">
+                <input type="text" id="nameStudent" placeholder="Please, enter your name" required minlength="1"
+                    maxlength="10" class="form-control">
+                <p class="valid-feedback">Correct</p>
+                <p class="invalid-feedback">Must be a maximum of 10 characters.</p>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="wellcome()">Enter</button>
+
         </div>
+        <p id="wellcomeStudent"></p>
+
         <div id="test">
             <h2>Test</h2>
             <p>Istqb Online Test Section</p>
         </div>
+
         <div id="ranking">
             <h2>Ranking</h2>
             <p>Student Ranking</p>
