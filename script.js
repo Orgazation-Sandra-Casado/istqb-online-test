@@ -11,8 +11,7 @@ function wellcome() {
 }
 
 function seeAnswer(){
-    let ques1 = document.getElementById('question1correct').value;
-    let mensaje = 'La respuesta correcta es ' + ques1;
+    let mensaje = 'The correct answer is C';
 
-    imprimir(mensaje, 'question1');
+    imprimir(mensaje, 'seeAnswer');
 }
