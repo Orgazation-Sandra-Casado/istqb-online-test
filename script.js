@@ -3,10 +3,16 @@ function imprimir(mensaje, id) {
     parrafo.innerText = mensaje;
 }
 
-function wellcome() {
-    let name = document.getElementById('nameStudent').value;
-    let mensaje = 'Hi ' + name + ', wellcome to the test!';
-
+function welcome() {
+    let formulario = document.getElementById('welcome');
+    let mensaje = '';
+    if (formulario.checkValidity()) {
+        let name = document.getElementById('nameStudent').value;
+        mensaje = 'Hi ' + name + ', welcome to the test!';
+    }
+    else {
+        mensaje ='Error';
+    }
     imprimir(mensaje, 'wellcomeStudent');
 }
 

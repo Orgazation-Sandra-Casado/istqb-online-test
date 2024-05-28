@@ -33,7 +33,7 @@
 
     <div class="container mt-5">
 
-        <div id="welcome" class="was-validated">
+        <form id="welcome" class="was-validated">
             <h2>Welcome</h2>
             <p>Welcome to ISTQB Online Test</p>
             <div class="mb-3">
@@ -41,13 +41,11 @@
                     maxlength="10" class="form-control">
                 <p class="valid-feedback">Correct</p>
                 <p class="invalid-feedback">Must be a maximum of 10 characters.</p>
-
             </div>
-
-            <button type="button" class="btn btn-success" onclick="wellcome()">Enter</button>
-
-        </div>
+            <button type="button" class="btn btn-success" onclick="welcome()">Enter</button>
+        </form>
         <p id="wellcomeStudent"></p>
+
 
         <div id="test">
             <h2>Test</h2>
