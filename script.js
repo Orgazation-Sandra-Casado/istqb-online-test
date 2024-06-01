@@ -11,7 +11,7 @@ function welcome() {
         mensaje = 'Hi ' + name + ', welcome to the test!';
     }
     else {
-        mensaje ='Error';
+        mensaje ='The name cannot be empty';
     }
     imprimir(mensaje, 'wellcomeStudent');
 }
