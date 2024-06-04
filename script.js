@@ -26,9 +26,9 @@ function correctAnswer() {
     let corregirRespuesta = document.getElementById('question1').value;
     let mensaje = '';
     if (corregirRespuesta === 'question1correct') {
-        mensaje = 'Correct';
+        mensaje = 'Correct!';
     } else if (corregirRespuesta === 'question1empty') {
-        mensaje = 'Cannot be empty';
+        mensaje = 'The answer cannot be empty';
     }
     else {
         mensaje = 'Wrong!';
@@ -38,14 +38,13 @@ function correctAnswer() {
 
 function seeScore() {
     let puntuacion = document.getElementById('question1');
-    let total;
     let mensaje = '';
     if (puntuacion === 'question1correct') {
-        mensaje = total + 2;
+        mensaje = 'Your score: +2';
     } else if (puntuacion === 'question1empty') {
-        mensaje = total;
+        mensaje = 'Your score: 0';
     } else {
-        mensaje = total - 1;
+        mensaje = 'Your score: -1';
     }
-    imprimir(mensaje);
+    imprimir(mensaje, 'seeScore');
 }
