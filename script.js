@@ -16,28 +16,31 @@ function welcome() {
     imprimir(mensaje, 'welcomeStudent');
 }
 
-function seeAnswer() {
-    let mensaje = 'The correct answer is C';
+const correctAnswerArray = ['C', 'A'] // contiene las 10 respuestas correctas
 
-    imprimir(mensaje, 'seeAnswer');
+function seeAnswer(correctAnswer, seeAnswerId) {
+    let mensaje = 'The correct answer is ' + correctAnswer;
+
+    imprimir(mensaje, seeAnswerId);
 }
 
-function correctAnswer() {
-    let corregirRespuesta = document.getElementById('question1').value;
+
+function correctAnswer(selectorId, correctAnswerString, questionCorrectId) {
+    let respuestaSeleccionada = document.getElementById(selectorId).value; // A o  B o C
     let mensaje = '';
-    if (corregirRespuesta === 'question1correct') {
-        mensaje = 'Correct!';
-    } else if (corregirRespuesta === 'question1empty') {
-        mensaje = 'The answer cannot be empty';
+    if (respuestaSeleccionada === correctAnswerString) {
+        mensaje = 'Correct! Your score +2';
     }
     else {
         mensaje = 'Wrong!';
     }
-    imprimir(mensaje, 'question1correct');
+    imprimir(mensaje, questionCorrectId);
 }
+
 
 function seeScore() {
     let puntuacion = document.getElementById('question1');
+
     let mensaje = '';
     if (puntuacion === 'question1correct') {
         mensaje = 'Your score: +2';
