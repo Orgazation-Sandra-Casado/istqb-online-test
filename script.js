@@ -30,9 +30,11 @@ function correctAnswer(selectorId, correctAnswerString, questionCorrectId) {
     let mensaje = '';
     if (respuestaSeleccionada === correctAnswerString) {
         mensaje = 'Correct! Your score +2';
+    } else if (respuestaSeleccionada === 'empty') {
+        mensaje = 'Your score 0';
     }
     else {
-        mensaje = 'Wrong!';
+        mensaje = 'Wrong! -1';
     }
     imprimir(mensaje, questionCorrectId);
 }
