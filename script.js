@@ -36,20 +36,20 @@ function correctAnswer(selectorId, correctAnswerString, questionCorrectId) {
     imprimir(mensaje, questionCorrectId);
 }
 
-function seeScore() {
-    const correctAnswerArray = ['C', 'A', 'A', 'B', 'B', 'C', 'B', 'C', 'A', 'C'] // contiene las 10 respuestas correctas
-    let puntuacion = 0;
-    let mensaje = '';
 
-    for (let i = 1; i <= correctAnswerArray.length; i++) {
-        let respuesta = document.getElementById('question' + i).value;
-        if (respuesta === correctAnswerArray[i]) {
+function seeScore(){
+    const correctAnswerArray = ['C', 'A', 'A', 'B', 'B', 'C', 'B', 'C', 'A', 'C'];
+    let puntuacion = 0;
+
+    for(let i = 0; i < correctAnswerArray.length; i++) {
+        let respuestaId = "question" + (i+1);
+        let respuesta = document.getElementById(respuestaId).value;
+
+        if(respuesta === correctAnswerArray[i]) {
             puntuacion = puntuacion + 2;
-            mensaje = 'Your score : ' + puntuacion;
-        } else if (respuesta !== 'empty') {
+        } else if(respuesta !== 'empty') {
             puntuacion = puntuacion - 1;
-            mensaje = 'Your score : ' + puntuacion;
         }
     }
-    imprimir(mensaje, 'seeScore');
+    imprimir(puntuacion, 'seeScore')
 }
