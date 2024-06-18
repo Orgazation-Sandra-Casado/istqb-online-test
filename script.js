@@ -16,11 +16,10 @@ function welcome() {
     imprimir(mensaje, 'welcomeStudent');
 }
 
-const correctAnswerArray = ['C', 'A'] // contiene las 10 respuestas correctas
+const correctAnswerArray = ['C', 'A','A','B','B','C','B','C','A','C'] // contiene las 10 respuestas correctas
 
 function seeAnswer(correctAnswer, seeAnswerId) {
     let mensaje = 'The correct answer is ' + correctAnswer;
-
     imprimir(mensaje, seeAnswerId);
 }
 
