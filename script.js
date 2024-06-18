@@ -1,3 +1,5 @@
+const correctAnswerArray = ['C', 'A', 'A', 'B', 'B', 'C', 'B', 'C', 'A', 'C'] // contiene las 10 respuestas correctas
+
 function imprimir(mensaje, id) {
     let parrafo = document.getElementById(id);
     parrafo.innerText = mensaje;
@@ -16,13 +18,10 @@ function welcome() {
     imprimir(mensaje, 'welcomeStudent');
 }
 
-const correctAnswerArray = ['C', 'A','A','B','B','C','B','C','A','C'] // contiene las 10 respuestas correctas
-
 function seeAnswer(correctAnswer, seeAnswerId) {
     let mensaje = 'The correct answer is ' + correctAnswer;
     imprimir(mensaje, seeAnswerId);
 }
-
 
 function correctAnswer(selectorId, correctAnswerString, questionCorrectId) {
     let respuestaSeleccionada = document.getElementById(selectorId).value; // A o  B o C
@@ -38,10 +37,13 @@ function correctAnswer(selectorId, correctAnswerString, questionCorrectId) {
     imprimir(mensaje, questionCorrectId);
 }
 
+function seeScore(){
+    let correctAnswerArray1 = ['C', 'A', 'A', 'B', 'B', 'C', 'B', 'C', 'A', 'C'] // contiene las 10 respuestas correctas
+    
+}
 
-function seeScore() {
+/*function seeScore() {
     let puntuacion = document.getElementById('question1');
-
     let mensaje = '';
     if (puntuacion === 'question1correct') {
         mensaje = 'Your score: +2';
@@ -51,4 +53,4 @@ function seeScore() {
         mensaje = 'Your score: -1';
     }
     imprimir(mensaje, 'seeScore');
-}
+}*/
