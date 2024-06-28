@@ -37,14 +37,14 @@
             <h2>Welcome</h2>
             <p>Welcome to ISTQB Online Test</p>
             <div class="mb-3">
-                <input type="text" id="nameStudent" placeholder="Please, enter your name" required minlength="1"
-                    maxlength="10" class="form-control">
-                <p class="valid-feedback">Correct</p>
-                <p class="invalid-feedback">Must be a maximum of 10 characters.</p>
+                <input type="text" id="nameStudent" data-cy="input-name-welcome" placeholder="Please, enter your name"
+                    required minlength="1" maxlength="10" class="form-control">
+                <p class="valid-feedback" data-cy="success-welcome-message">Correct</p>
+                <p class="invalid-feedback" data-cy="error-welcome-message">Must be a maximum of 10 characters.</p>
             </div>
-            <button type="button" class="btn btn-success" onclick="welcome()">Enter</button>
+            <button type="button" class="btn btn-success" data-cy="button-start" onclick="welcome()">Enter</button>
         </form>
-        <p id="welcomeStudent"></p>
+        <p id="welcomeStudent" data-cy="welcome-message"></p>
 
 
         <div id="test">
