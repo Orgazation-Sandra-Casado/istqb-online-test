@@ -1,4 +1,3 @@
-
 function imprimir(mensaje, id) {
     let parrafo = document.getElementById(id);
     parrafo.innerText = mensaje;
@@ -7,6 +6,7 @@ function imprimir(mensaje, id) {
 function welcome() {
     let formulario = document.getElementById('welcome');
     let mensaje = '';
+
     if (formulario.checkValidity()) {
         let name = document.getElementById('nameStudent').value;
         mensaje = 'Hi ' + name + ', welcome to the test!';
@@ -25,6 +25,7 @@ function seeAnswer(correctAnswer, seeAnswerId) {
 function correctAnswer(selectorId, correctAnswerString, questionCorrectId) {
     let respuestaSeleccionada = document.getElementById(selectorId).value; // A o  B o C
     let mensaje = '';
+
     if (respuestaSeleccionada === correctAnswerString) {
         mensaje = 'Correct! Your score +2';
     } else if (respuestaSeleccionada === 'empty') {
@@ -37,19 +38,19 @@ function correctAnswer(selectorId, correctAnswerString, questionCorrectId) {
 }
 
 
-function seeScore(){
+function seeScore() {
     const correctAnswerArray = ['C', 'A', 'A', 'B', 'B', 'C', 'B', 'C', 'A', 'C'];
     let puntuacion = 0;
 
-    for(let i = 0; i < correctAnswerArray.length; i++) {
-        let respuestaId = "question" + (i+1);
+    for (let i = 0; i < correctAnswerArray.length; i++) {
+        let respuestaId = "question" + (i + 1);
         let respuesta = document.getElementById(respuestaId).value;
 
-        if(respuesta === correctAnswerArray[i]) {
+        if (respuesta === correctAnswerArray[i]) {
             puntuacion = puntuacion + 2;
-        } else if(respuesta !== 'empty') {
+        } else if (respuesta !== 'empty') {
             puntuacion = puntuacion - 1;
         }
     }
-    imprimir(puntuacion, 'seeScore')
+    imprimir('Total score: ' + puntuacion, 'seeScore')
 }
